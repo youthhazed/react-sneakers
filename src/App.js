@@ -1,29 +1,26 @@
-
+import Card from './components/Card'
+import Header from './components/Header';
+import CartDrawer from './components/CartDrawer';
 function App() {
   return (
     <div className="wrapper clear">
-      <header className="d-flex justify-between align-center p-40">
-       <div className="d-flex align-center">
-          <img width={40} height={40} src="img/logo.png" alt=""/>
-          <div className="headerInfo">
-            <h3 className="text-uppercase">React Sneakers</h3>
-            <p className="opacity-5">Магазин лучших кроссовок</p>
-          </div>
-       </div>
-        <ul className="d-flex">
-          <li className="mr-30">
-            <img width={18} height={17} src="img/cart-icon.svg" alt="" />
-            <span>1205 руб.</span>
-          </li>
-          <li>
-            <img width={18} height={18} src="img/user-icon.svg" alt="" />
-          </li>
-        </ul>
-      </header>
+      <CartDrawer/>
+      <Header/>
       <div className="content p-40">
-        <h1 className="mb-40">Все кроссовки</h1>
-        <div className="flex-wrapper d-flex">
+        <div className="d-flex align-center justify-between mb-40">
+          <h1>Все кроссовки</h1>
+          <div className="search-block d-flex">
+            <img src="img/search-icon.svg" alt="Search" />
+            <input type="text" placeholder="Поиск..." />
+          </div>
+        </div>
+        
+        <div className="d-flex">
+          <Card />
           <div className="card">
+            <div className="favorite">
+              <img src="img/heart-unliked.svg" alt="Unliked" />
+            </div>
             <img width={133} height={112} src="img/sneakers/1.jpg" alt="Sneakers" />
             <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
             <div className="d-flex justify-between align-center">
@@ -32,7 +29,7 @@ function App() {
                 <b>12 999 руб.</b>
               </div>
               <button className="button">
-                <img width={11} height={11} src="img/add-button.svg" alt=""/>
+                <img width={11} height={11} src="img/add-card-button.svg" alt=""/>
               </button>
             </div>
           </div>
@@ -46,7 +43,7 @@ function App() {
                 <b>8 499 руб.</b>
               </div>
               <button className="button">
-                <img width={11} height={11} src="img/add-button.svg" alt=""/>
+                <img width={11} height={11} src="img/add-card-button.svg" alt=""/>
               </button>
             </div>
           </div>
@@ -60,7 +57,7 @@ function App() {
                 <b>8 499 руб.</b>
               </div>
               <button className="button">
-                <img width={11} height={11} src="img/add-button.svg" alt=""/>
+                <img width={11} height={11} src="img/add-card-button.svg" alt=""/>
               </button>
             </div>
           </div>
@@ -74,7 +71,7 @@ function App() {
                 <b>8 999 руб.</b>
               </div>
               <button className="button">
-                <img width={11} height={11} src="img/add-button.svg" alt=""/>
+                <img width={11} height={11} src="img/add-card-button.svg" alt=""/>
               </button>
             </div>
           </div>
